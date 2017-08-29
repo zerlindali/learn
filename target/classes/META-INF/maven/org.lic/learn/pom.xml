@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.lic</groupId>
+  <artifactId>learn</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>learn Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <spring.version>4.2.5.RELEASE</spring.version>
+	<junit.version>4.12</junit.version>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<jdk.version>1.7</jdk.version>
+  </properties>
+  
+  <build>
+  	  <finalName>${project.artifactId}</finalName>
+	  <plugins>
+	    <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-compiler-plugin</artifactId>
+	      <configuration>
+	        <source>1.7</source>
+	        <target>1.7</target>
+	      </configuration>
+	    </plugin>
+	  </plugins>
+  </build>
+  
+  
+  <dependencies>
+  
+  	<!-- spring -->
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${spring.version}</version>
+	</dependency>  
+  
+    <!-- log4j -->
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
+	
+	<!-- log4j2 -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>2.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-core</artifactId>
+		<version>2.2</version>
+	</dependency>
+	
+	<!-- logback -->
+	<dependency> 
+		<groupId>ch.qos.logback</groupId> 
+		<artifactId>logback-core</artifactId> 
+		<version>1.1.3</version> 
+	</dependency> 
+	<dependency> 
+	    <groupId>ch.qos.logback</groupId> 
+	    <artifactId>logback-classic</artifactId> 
+	    <version>1.1.3</version> 
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.12</version>
+	</dependency>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  
+</project>
